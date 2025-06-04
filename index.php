@@ -3,4 +3,3 @@
 <p>about us page</p>
 <?php include ('include/footer.php'); ?>
 
-?>
