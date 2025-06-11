@@ -11,6 +11,10 @@ $workouts= loadworkouts();
         <strong><?php echo $w['title']; ?></strong>
         <?php echo $w['level']; ?>
         <?php echo $w['duration']; ?>
+        <?php echo $w['strength']; ?>
+        <?php echo $w['muscles %']; ?>
+        <?php echo $w['fat %']; ?>
+        <?php echo $w['fat loss']; ?>
     </li>
 
     <?php endforeach; ?>
