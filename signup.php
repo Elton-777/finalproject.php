@@ -1,23 +1,88 @@
-<?php
-include('includes/db.php');
+<html>
+<head>
+  <title>My book | sign up</title>
+</head>
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-$username = trim($_POST['username']);
-$password = password_hash($POST['password'], PASSWORD_DEFAULT);
+<style>
+  #bar{height:100px;
+    background-color:rgb(59,39,152);
+   color:rgb(255, 255, 255);
+   padding: 4px;
+   }
 
-$stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-$stmt->bind_param("ss", $username, $password);
+   #signup_button{
+    background-color: #42b72a;
+    width: 70px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 4px;
+    float:right;
+   }
 
-if ($stmt->execute()) {
-    header("Location: login.php");
-} else {
-    echo "Error: " . $stmt->error;
-}
-?>
+   #bar2{
+    background-color: grey;
+    width:800px;
+    margin:auto; 
+    margin-top: 50px;
+    font-weight:bold;
+    padding: 10px;
+    padding-top:50px;
+    text-align:center;
 
-<form method="post">
-    <h2>Register</h2>
-    <input type="text" name="username" placceholder="Username" required><br><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
-    <input type="submit" value="Register">
-</form>
+   }
+
+   #text{
+    height:40px;
+    width:300px;
+    border-radius:4px;
+    border:solid 1px #aaa;
+    padding: 4px;
+    font-size: 14px;
+
+   }
+
+   #button{
+    width: 300px;
+    height: 40px;
+    border-radius:4px;
+    font-weight: bold;
+    border:none;
+    background-color:rgb(59,39,152);
+    color:white;
+
+   }
+</style>
+
+<body style="font-family: tahoma;background-color;rgb(131, 140, 155);">
+
+
+  <div id="bar">
+
+    <div style="font-size: 40px;">Mybook</div>
+    <div id="signup_button">log in</div>
+    
+  </div>
+
+
+  <div id="bar2">
+    sign up to Mybook<br><br>
+    <input type="text" id="text" placeholder="First name"><br><br>
+    <input type="text" id="text" placeholder="Last name"><br><br>
+    <span style="font-weight:normal;">Gender:</span><br>
+    <select id="text">
+        <option>Male</option>
+        <option>Female</option>
+
+    </select>
+    <br><br>
+    <input type="text" id="text" placeholder="Email"><br><br>
+    <input type="password" id="text" placeholder="Password"><br><br>
+    <input type="password" id="text" placeholder="Retype Password"><br><br>
+
+    <input type="submit"id="button" value="Sign up">
+<br><br><br><br>
+
+  </div>
+
+</body>
+</html>
