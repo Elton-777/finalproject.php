@@ -56,7 +56,45 @@
 
         #friends{
             clear: both;
+            font-size: 12px;
+            font-weight: bold;
+            color: #405d9b;
         }
+
+        textarea{
+            width: 100%;
+            border:none;
+            font-family:tahoma;
+            font-size:14px;
+            height: 60px;
+
+        }
+
+        #post_button{
+            float:right;
+            background-color:  #405d9b;
+            border: none;
+            color: white;
+            padding: 4px;
+            font-size: 14px;
+            border-radius:2px;
+            width: 50px;
+        }
+
+        #post_bar{
+            margin-top: 20px;
+            background-color: white;
+            padding: 10px;
+        }
+
+        #post{
+            padding: 4px;
+            font-size: 13px;
+            display: flex;
+            margin-bottom:20px;
+
+        }
+
         
 
     </style>
@@ -99,21 +137,21 @@
                 </div>
 
                 <div id="friends">
-                    <img id="friends_img" src="guy.jfif">
+                    <img id="friends_img" src="guy (2).jfif">
                     <br>
-                    First user
+                    Second user
                 </div>
 
                 <div id="friends">
-                    <img id="friends_img" src="guy.jfif">
+                    <img id="friends_img" src="guy3.jfif">
                     <br>
-                    First user
+                    Third user
                 </div>
 
                 <div id="friends">
-                    <img id="friends_img" src="guy.jfif">
+                    <img id="friends_img" src="guy (4).jfif">
                     <br>
-                    First user
+                    Fourth user
                 </div>
                 
 
@@ -123,7 +161,44 @@
 
         </div> 
 
-        <div style="min-height: 400px; flex:2.5;">
+        <div style="min-height: 400px; flex:2.5; padding:20px; padding-right:0px;">
+
+        <div style="border:solid 1px #aaa; padding:10px; background-color:white;">
+            <textarea placeholder="Whats on your mind"></textarea>
+            <input id="post_button" type="submit" value="Post">
+            <br>
+
+        </div>
+        <div>
+
+        </div id="post_bar">
+
+        <div id="post">
+                      </div>
+            <div>
+  <div>
+                <img src="girl1.jfif" style="width: 75px; margin-right: 6px;">
+
+                <div style="font-weight: bold; color: #405d9b;">First user</div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookf type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br/><br/>
+                <a href="">Like</a> . <a href="">Comment</a> . <span style="color: #999;">April 23 2020</span>
+            </div>
+        </div>
+
+        <div id="post">
+                      </div>
+            <div>
+  <div>
+                <img src="girl2.jfif" style="width: 75px; margin-right: 4px;">
+
+                <div style="font-weight: bold; color: #405d9b;">First user</div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen bookf type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                <br/><br/>
+                <a href="">Like</a> . <a href="">Comment</a> . <span style="color: #999;">April 23 2020</span>
+            </div>
+        </div>
+
 
         </div>
     </div>
