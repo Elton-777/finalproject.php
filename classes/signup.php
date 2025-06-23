@@ -9,18 +9,20 @@ class Signup
         foreach ($data as $key => $value) {
             
             if(empty($value))
+        
             {
-                $error = $error . $key . "is empty!<br>";
-            }
+                $this->$error = $this->$error . $key . "is empty!<br>";
+             }
         }
-        if($error == "")
+        if($tis->$error == "")
         {
-            create_user($data);
-            return "success";
-
-        }else {
-            return $error;
+        $this->create_user($data);
+        return "success";
+        }else
+        {
+            return $this->$error;
         }
+        
 
     }
 
@@ -63,4 +65,4 @@ class Signup
     }
 
     }
-
+?>

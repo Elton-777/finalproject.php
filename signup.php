@@ -14,10 +14,9 @@ if($result = "")
   echo $result;
   echo "</div>";
 }
-
-//echo "<pre>";
-//print_r();
-//echo "</pre>";
+echo "<pre>";
+print_r();
+echo "</pre>";
   
 
 }
