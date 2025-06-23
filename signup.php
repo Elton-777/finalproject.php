@@ -7,19 +7,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST');
 {
 $signup = new Signup();
 $result = $signup->evaluate($_POST);
-if($ressult = ""){
+if($result = "")
+{
+  echo "<div syle='text-align:center; font-size:12px; color:white; background-color;grey;>";
+  echo "The following errors occured<br>";
   echo $result;
+  echo "</div>";
 }
-
-
-
 
 //echo "<pre>";
 //print_r();
 //echo "</pre>";
   
-}
 
+}
 
 ?>
 

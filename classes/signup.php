@@ -10,17 +10,16 @@ class Signup
             
             if(empty($value))
             {
-                $this->$error .=  "$key is empty!<br>";
+                $error = $error . $key . "is empty!<br>";
             }
         }
-        if($this->$error == "")
+        if($error == "")
         {
-            $this->create_user($data);
-            return "ssuccess";
+            create_user($data);
+            return "success";
 
-        }else
-        {
-            return $this->$error;
+        }else {
+            return $error;
         }
 
     }
@@ -31,7 +30,7 @@ class Signup
         $lastname = $data['last_name'];
         $gender = $data['gender'];
         $email = $data['email'];
-        $password =['password'];
+        $password =$data['password'];
         
 
         $url_address = strtolower($firstname) . "."  . strtolower($lastname);
@@ -42,8 +41,8 @@ class Signup
         values('$userid','$first_name','$last_name','$gender', '$email', '$password','$url_address')";
         return $query;
 
-    $DB = new Database();
-    $DB->save($query);
+    //$DB = new Database();
+    //$DB->save($query);
     return "User created!";
     }
 
@@ -64,3 +63,4 @@ class Signup
     }
 
     }
+
